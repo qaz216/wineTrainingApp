@@ -69,7 +69,8 @@ public class WineTrainingApp {
 	private void trainModel() {
 		// Configure Spark Session
 		String appName = getAppName();
-        SparkConf conf = new SparkConf().setMaster(MASTER_NODE).setAppName(appName).set("spark.testing.memory", "2147480000");
+        SparkConf conf = new SparkConf().setMaster(MASTER_NODE).setAppName(appName)
+        		.set("fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem").set("spark.testing.memory", "2147480000");
         JavaSparkContext jsc = new JavaSparkContext(conf);
         SparkSession spark =  SparkSession.builder().appName(appName).master(MASTER_NODE).getOrCreate();
         

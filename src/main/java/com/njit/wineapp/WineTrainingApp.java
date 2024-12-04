@@ -69,9 +69,9 @@ public class WineTrainingApp {
 	private void trainModel() {
 		// Configure Spark Session
 		String appName = getAppName();
-        SparkConf conf = new SparkConf().setMaster(MASTER_NODE).setAppName(appName);
+        SparkConf conf = new SparkConf().setMaster(MASTER_NODE).setAppName(appName).set("spark.testing.memory", "2147480000");
         JavaSparkContext jsc = new JavaSparkContext(conf);
-        SparkSession spark =  SparkSession.builder().appName(appName).config("spark.executor.memory", "3g").config("spark.driver.memory", "3g").master(MASTER_NODE).getOrCreate();
+        SparkSession spark =  SparkSession.builder().appName(appName).master(MASTER_NODE).getOrCreate();
         
         // Get training data and provision regression
         String traingSet = getTrainingSet();

@@ -22,6 +22,17 @@ import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import java.io.FileWriter;
 
+#
+# Wine Traing Application
+# NJIT 2024 Winter Term
+# Course ID: FA24-CS643853
+# Author: Aryeh Chayim Golob
+# Date: 12/10/2024
+#
+# Professor: Manoop.Talasila
+# TA: Dylan Da Costa
+#
+
 public class WineTrainingApp {
   private Properties prop = null;
 

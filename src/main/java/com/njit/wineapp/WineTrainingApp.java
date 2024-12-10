@@ -26,12 +26,25 @@ import java.io.FileWriter;
 # Wine Traing Application
 # NJIT 2024 Winter Term
 # Course ID: FA24-CS643853
-# Author: Aryeh Chayim Golob
+# Author: Aryeh Chayim Golob - 216
 # Date: 12/10/2024
 #
 # Professor: Manoop.Talasila
 # TA: Dylan Da Costa
 #
+# Application Type: AWS Spark
+# Running Instructions:
+#  1) Create EMR Cluster on AWS with NJIT credentials
+#  2) ADD Step
+#  3) Select 'Spark Application' from UI
+#  4) Application Location
+#       S3 Location: s3://project2-s3-bucket-aryeh/wine-training-app-1.0-SNAPSHOT.jar
+#  5) Configure & Trigger Step Through AWS
+#  6) Verify Model Ouput
+#       S3 Location s3://project2-s3-bucket-aryeh/
+#  7) Run Standalone Application from Model mode: 'run_model'
+#  8) Verify STDOUT & results.txt output
+  
 
 public class WineTrainingApp {
   private Properties prop = null;

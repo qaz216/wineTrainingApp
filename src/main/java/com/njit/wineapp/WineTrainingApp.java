@@ -45,7 +45,7 @@ import java.io.FileWriter;
 #  7) Run Standalone Application from Model mode: 'run_model'
 #  8) Verify STDOUT & results.txt output
   
-
+// Load Properties File
 public class WineTrainingApp {
   private Properties prop = null;
 
@@ -58,6 +58,10 @@ public class WineTrainingApp {
     }
   }
 
+  // Run Application
+  // mode:
+  //   1) Train Model (On EMR Cluster)
+  //   2) Run Client: EC2 instance & docker image
   public static void main(String[] args) throws Exception {
     // Create Wine Training Application
     WineTrainingApp app = new WineTrainingApp();

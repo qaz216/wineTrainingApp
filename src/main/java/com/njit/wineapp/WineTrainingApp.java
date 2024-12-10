@@ -44,11 +44,12 @@ import java.io.FileWriter;
 #       S3 Location s3://project2-s3-bucket-aryeh/
 #  7) Run Standalone Application from Model mode: 'run_model'
 #  8) Verify STDOUT & results.txt output
+#
   
-// Load Properties File
 public class WineTrainingApp {
   private Properties prop = null;
 
+  // Load Properties File
   public WineTrainingApp() {
     this.prop = new Properties();
     try {

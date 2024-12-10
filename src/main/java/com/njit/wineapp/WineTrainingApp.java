@@ -61,6 +61,7 @@ public class WineTrainingApp {
     validationData = bucket + validationData;
     SparkConf conf = new SparkConf().setMaster(masterNode).setAppName(appName)
       .set("fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
+      .set("spark.testing.memory", "571859200")
       .set("fs.s3a.aws.credentials.provider", "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider");
     JavaSparkContext jsc = new JavaSparkContext(conf);
     SparkSession spark = SparkSession.builder().appName(appName).getOrCreate();

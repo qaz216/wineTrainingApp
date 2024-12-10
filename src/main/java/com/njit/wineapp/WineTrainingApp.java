@@ -79,6 +79,7 @@ public class WineTrainingApp {
     }
   }
 
+  # Run Model
   private void runModel() throws Exception {
     String appName = getAppName();
     String validationData = getValidationSet();
@@ -106,6 +107,7 @@ public class WineTrainingApp {
     jsc.close();
   }
 
+  // Train Model
   private void trainModel() throws Exception {
     // Configure Spark Session
     String appName = getAppName();

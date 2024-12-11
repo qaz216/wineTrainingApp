@@ -9,4 +9,5 @@ RUN set -ex
 RUN mkdir -p data 
 
 COPY ./target/wine-training-app-1.0-SNAPSHOT.jar /app
-COPY ./data/* data
+
+ENTRYPOINT ["java", "-jar", "/app/wine-training-app-1.0-SNAPSHOT.jar"]

@@ -79,7 +79,7 @@ public class WineTrainingApp {
     }
   }
 
-  # Run Model
+  // Run Model
   private void runModel() throws Exception {
     String appName = getAppName();
     String validationData = getValidationSet();
